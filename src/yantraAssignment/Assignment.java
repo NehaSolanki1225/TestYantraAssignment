@@ -38,7 +38,8 @@ public class Assignment {
 		for(String wd:splitString)
 		{
 			System.out.print(wd + " ");
-		}		
+		}
+		
 	}
 	
 	//method for removing the duplicates in the String
@@ -64,7 +65,7 @@ public class Assignment {
 				count++;
 			}
 		}
-		if(count==1)
+		if(count>0)
 		{
 			withoutDuplicate=withoutDuplicate+s2.charAt(i);
 		}
