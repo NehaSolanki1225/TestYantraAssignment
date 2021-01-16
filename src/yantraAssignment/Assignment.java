@@ -4,13 +4,17 @@ public class Assignment {
 	public static void main(String[] args) {
 		Assignment a=new Assignment();
 		String st="Welcome to Test Yantra";
+		//calling and printing the return String of the method for reverse the given String
 		System.out.println(a.ReverseTheString(st));
-		a.swapFirstAndLastWord(st);
-		System.out.println();
-		System.out.println(a.removeTheDuplicate(st));
 		
+		//calling the method for Swapping first and last word in the given String
+		a.swapFirstAndLastWord(st);
+		
+		//calling and printing the return String of the method for removing the duplicates in the given String
+		System.out.println(a.removeTheDuplicate("\n"+st));	
 	}
 	
+	//method for reverse String
 	public String ReverseTheString(String s)
 	{
 		String rev="";
@@ -21,6 +25,7 @@ public class Assignment {
 		return rev;
 	}
 	
+	//method for Swapping first and last word in the String
 	public void swapFirstAndLastWord(String s)
 	{
 		String[] splitString = s.split(" ");
@@ -29,13 +34,14 @@ public class Assignment {
 		
 		splitString[0]=last;
 		splitString[splitString.length-1]=first;
-		
+		//printing the array
 		for(String wd:splitString)
 		{
 			System.out.print(wd + " ");
 		}		
 	}
 	
+	//method for removing the duplicates in the String
 	public String removeTheDuplicate(String s)
 	{
 	String s1=s.toLowerCase()	;
