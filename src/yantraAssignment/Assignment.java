@@ -4,14 +4,17 @@ public class Assignment {
 	public static void main(String[] args) {
 		Assignment a=new Assignment();
 		String st="Welcome to Test Yantra";
+		System.out.println("reverse String: ");
 		//calling and printing the return String of the method for reverse the given String
 		System.out.println(a.ReverseTheString(st));
 		
-		//calling the method for Swapping first and last word in the given String
-		a.swapFirstAndLastWord(st);
+		System.out.println("\n"+"Swapped String: ");
+		//calling the printing the return String of method for Swapping first and last word in the given String
+		System.out.println(a.swapFirstAndLastWord(st));
 		
+		System.out.println("\n"+"no Duplicate String: ");
 		//calling and printing the return String of the method for removing the duplicates in the given String
-		System.out.println(a.removeTheDuplicate("\n"+st));	
+		System.out.println(a.removeTheDuplicate(st));	
 	}
 	
 	//method for reverse given String
@@ -26,20 +29,17 @@ public class Assignment {
 	}
 	
 	//method for Swapping first and last word in the String
-	public void swapFirstAndLastWord(String s)
+	public String swapFirstAndLastWord(String s)
 	{
-		String[] splitString = s.split(" ");
-		String first=splitString[0];
-		String last =splitString[splitString.length-1];
+		String[] stringArray = s.split(" ");
+		StringBuffer sb=new StringBuffer();
 		
-		splitString[0]=last;
-		splitString[splitString.length-1]=first;
-		//printing the array
-		for(String wd:splitString)
+		for(int i= 0; i < stringArray.length; i++) 
 		{
-			System.out.print(wd + " ");
+			sb.append(stringArray[i]+" ");
 		}
-		
+		String swappedstring=sb.toString();
+		return swappedstring;
 	}
 	
 	//method for removing the duplicates in the String
