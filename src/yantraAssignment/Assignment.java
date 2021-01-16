@@ -14,7 +14,7 @@ public class Assignment {
 		System.out.println(a.removeTheDuplicate("\n"+st));	
 	}
 	
-	//method for reverse String
+	//method for reverse given String
 	public String ReverseTheString(String s)
 	{
 		String rev="";
